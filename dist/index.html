@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Project List Column -->
+      <div class="projects-container">
+        <h2>Projects</h2>
+        <ul id="project-list"></ul>
+        <form id="new-project-form">
+          <input type="text" id="new-project-input" placeholder="New Project Name" required />
+          <button type="submit">+</button>
+        </form>
+      </div>
+
+      <!-- Todos Column -->
+      <div class="todos-container">
+        <h2 id="current-project-title">Todos</h2>
+        <div id="todo-list"></div>
+        <button id="add-todo-button" class="hidden">+ Add Todo</button>
+      </div>
+    </div>
+
+    <!-- Add/Edit Todo Modal -->
+    <div id="todo-modal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close-button">×</span>
+        <h3 id="modal-title">Add New Todo</h3>
+        <form id="new-todo-form">
+          <input type="hidden" id="todo-id" />
+          <input type="text" id="todo-title" placeholder="Title" required />
+          <input type="text" id="todo-description" placeholder="Description" />
+          <label for="todo-dueDate">Due Date:</label>
+          <input type="date" id="todo-dueDate" />
+          <label for="todo-priority">Priority:</label>
+          <select id="todo-priority">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+          <button type="submit">Save Todo</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="bundle.js"></script>
+  </body>
+</html>
