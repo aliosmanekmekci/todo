@@ -1,6 +1,6 @@
-class List {
-    constructor(title, id) {
-        title = this.title;
-        id = this.crypto.randomUUID();
-    }
-}
+import TodoApp from "./app.js";
+import "./styles/style.css";
+
+document.addEventListener("DOMContentLoaded", () => {
+  new TodoApp();
+});
