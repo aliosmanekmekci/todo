@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   mode: "development", // Add this to fix the mode warning
@@ -14,12 +15,15 @@ module.exports = {
       template: "./src/index.html", // Update this path
       title: "Todo List",
     }),
+    new MiniCssExtractPlugin({
+      filename: "styles.css",
+    }),
   ],
   module: {
     rules: [
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
         test: /\.js$/, // Add this rule for JavaScript files

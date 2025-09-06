@@ -11,10 +11,11 @@ npm run build
 echo "📋 Copying files to root directory..."
 cp dist/index.html .
 cp dist/bundle.js .
+cp dist/styles.css .
 
 # Add and commit changes
 echo "💾 Committing changes..."
-git add index.html bundle.js
+git add index.html bundle.js styles.css
 git commit -m "deploy: Update GitHub Pages files"
 
 # Push to main branch
