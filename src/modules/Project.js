@@ -1,5 +1,5 @@
 import Todo from "./Todo.js";
- 
+
 export default class Project {
   constructor(name) {
     this.id = Date.now().toString();
@@ -10,6 +10,7 @@ export default class Project {
   addTodo(todoData) {
     const newTodo = new Todo(...todoData, this.id);
     this.todos.push(newTodo);
+    console.log(newTodo);
     return newTodo;
   }
 

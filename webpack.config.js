@@ -38,6 +38,6 @@ module.exports = {
       directory: path.join(__dirname, "dist"), // Fix content serving
     },
     compress: true,
-    port: 8080,
+    port: 3000,
   },
 };
