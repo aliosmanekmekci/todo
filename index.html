@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+  <script defer src="bundle.js"></script></head>
+  <body>
+    <div class="sidebar">
+      <h2>Projects</h2>
+      <ul id="projects-list"></ul>
+      <button id="new-project-btn">+ New Project</button>
+    </div>
+
+    <main>
+      <div id="todos-container">
+        <p>Select a project to view todos</p>
+      </div>
+    </main>
+
+    <!-- Modal System -->
+    <div id="modal-overlay" class="modal-overlay">
+      <div class="modal">
+        <div class="modal-header">
+          <h3 id="modal-title">Modal Title</h3>
+          <button id="modal-close" class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form id="modal-form">
+            <div id="modal-content">
+              <!-- Dynamic content will be inserted here -->
+            </div>
+            <div class="modal-actions">
+              <button type="button" id="modal-cancel" class="btn btn-secondary">Cancel</button>
+              <button type="submit" id="modal-submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
